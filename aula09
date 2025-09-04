@@ -1,0 +1,35 @@
+class Contatos:
+   def __init__(self):
+       self.contatos = list()
+
+   def adiciona_contato(self, nome, telefone, cidade):
+       self.contatos.append({'nome': nome, 'telefone': telefone, 'cidade': cidade})
+
+
+contatos = Contatos()
+contatos.adiciona_contato("João", "11999999999", "São Paulo")
+contatos.adiciona_contato("Maria", "11888889999", "Rio de Janeiro")
+contatos.adiciona_contato("José", "11777779999", "São Paulo")
+contatos.adiciona_contato("Ana", "11666669999", "Curitiba")
+contatos.adiciona_contato("Pedro", "11555559999", "Maringá")
+print(contatos.contatos)
+contatos.contatos.sort(key=lambda contato: contato["nome"])
+print(contatos.contatos)
+
+    def listacontato(self,cidade):
+     for contato in self.contatos:
+         if contato["cidade"] == cidade:
+            print(f"contato: {contato}")
+
+
+contatos = Contatos()
+contatos.adiciona_contato("João", "11999999999", "São Paulo")
+contatos.adiciona_contato("Maria", "11888889999", "Rio de Janeiro")
+contatos.adiciona_contato("José", "11777779999", "São Paulo")
+contatos.adiciona_contato("Ana", "11666669999", "Curitiba")
+contatos.adiciona_contato("Pedro", "11555559999", "Maringá")
+
+
+print(contatos.contatos)
+contatos.listacontato(input("digite a cidade:"))
+ 
